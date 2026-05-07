@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={kumbhSans.variable}>
-      <body>
+      <body className="min-h-screen">
         <CartProvider>{children}</CartProvider>
       </body>
     </html>

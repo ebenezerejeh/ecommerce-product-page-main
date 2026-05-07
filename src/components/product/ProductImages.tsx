@@ -38,13 +38,13 @@ export function ProductImages({ images }: ProductImagesProps) {
           />
         </button>
 
-        <div className="flex gap-6 mt-8">
+        <div className="flex gap-6 mt-10">
           {images.map((img, i) => (
             <button
               key={i}
               onClick={() => setSelectedIndex(i)}
               className={cn(
-                "relative aspect-square w-full rounded-xl overflow-hidden transition-opacity",
+                "relative aspect-square w-full rounded-xl overflow-hidden transition-opacity cursor-pointer",
                 i === selectedIndex
                   ? "ring-2 ring-orange"
                   : "hover:opacity-60"

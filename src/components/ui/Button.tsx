@@ -13,7 +13,7 @@ const buttonVariants = cva(
         ghost: "bg-transparent text-dark-grey hover:text-dark-blue",
       },
       size: {
-        default: "px-8 py-5 text-base gap-4",
+        default: "px-8 py-[18px] text-base gap-4",
         sm: "px-4 py-3 text-sm gap-2",
       },
     },

@@ -22,7 +22,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
       <div className="w-[250px] bg-white h-full px-6 pt-6 pb-10 flex flex-col">
         <button
           onClick={onClose}
-          className="text-grayish-blue hover:text-dark-blue transition-colors mb-14 self-start"
+          className="text-grayish-blue hover:text-dark-blue transition-colors mb-14 self-start cursor-pointer"
           aria-label="Close menu"
         >
           <X className="w-5 h-5" />

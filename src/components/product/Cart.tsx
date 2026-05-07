@@ -9,20 +9,21 @@ export function Cart() {
   const { items, removeItem } = useCart()
 
   return (
-    <div className="absolute top-full right-0 mt-6 w-[360px] max-w-[calc(100vw-1.5rem)] bg-white rounded-xl shadow-2xl z-50 overflow-hidden">
+    <div className="absolute top-full right-0 mt-6 w-90 max-w-[calc(100vw-2rem)] bg-white rounded-xl shadow-2xl z-50 overflow-hidden">
       <div className="px-6 py-5 border-b border-grayish-blue/30">
         <h2 className="font-bold text-dark-blue">Cart</h2>
       </div>
+
       <div className="p-6">
         {items.length === 0 ? (
-          <p className="text-dark-grey font-bold text-center py-8">
-            Your cart is empty.
-          </p>
+          <div className="flex items-center justify-center min-h-30">
+            <p className="text-dark-grey font-bold">Your cart is empty.</p>
+          </div>
         ) : (
           <div className="flex flex-col gap-6">
             {items.map((item) => (
               <div key={item.product.id} className="flex items-center gap-4">
-                <div className="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+                <div className="relative w-12.5 h-12.5 rounded-lg overflow-hidden shrink-0">
                   <Image
                     src={item.product.images[0].thumbnail}
                     alt={item.product.name}
@@ -43,10 +44,10 @@ export function Cart() {
                 </div>
                 <button
                   onClick={() => removeItem(item.product.id)}
-                  className="text-grayish-blue hover:text-dark-blue transition-colors flex-shrink-0"
+                  className="text-grayish-blue hover:text-dark-blue transition-colors shrink-0 cursor-pointer"
                   aria-label="Remove item"
                 >
-                  <Trash2 className="w-4 h-4" />
+                  <Trash2 className="w-3.5 h-3.5" />
                 </button>
               </div>
             ))}

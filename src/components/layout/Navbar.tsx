@@ -28,11 +28,11 @@ export function Navbar() {
 
   return (
     <>
-      <header className="border-b border-grayish-blue/30">
-        <nav className="max-w-[1110px] mx-auto px-6 flex items-center h-[70px] md:h-[89px] gap-4 md:gap-14">
+      <header className="border-b border-grayish-blue/30 flex justify-center">
+        <nav className="w-full max-w-[1100px] px-6 flex items-center h-17.5 md:h-22.25 gap-4 md:gap-14">
           {/* Hamburger — mobile only */}
           <button
-            className="md:hidden text-dark-grey hover:text-dark-blue transition-colors"
+            className="md:hidden text-dark-grey hover:text-dark-blue transition-colors cursor-pointer"
             onClick={() => setMenuOpen(true)}
             aria-label="Open navigation menu"
           >
@@ -51,12 +51,12 @@ export function Navbar() {
           </div>
 
           {/* Desktop nav links */}
-          <ul className="hidden md:flex items-center gap-8 h-full flex-1">
+          <ul className="hidden md:flex items-center gap-8 h-full">
             {navLinks.map((link) => (
               <li key={link} className="h-full flex items-center relative group">
                 <a
                   href="#"
-                  className="text-dark-grey hover:text-dark-blue transition-colors text-[15px]"
+                  className="text-dark-grey hover:text-dark-blue transition-colors text-[15px] cursor-pointer"
                 >
                   {link}
                 </a>
@@ -66,11 +66,11 @@ export function Navbar() {
           </ul>
 
           {/* Right — cart + avatar */}
-          <div className="ml-auto md:ml-0 flex items-center gap-5 md:gap-8">
+          <div className="ml-auto flex items-center gap-5 md:gap-8">
             <div ref={cartRef} className="relative">
               <button
                 onClick={() => setCartOpen((o) => !o)}
-                className="relative text-dark-grey hover:text-dark-blue transition-colors pt-1"
+                className="relative text-dark-grey hover:text-dark-blue transition-colors pt-1 cursor-pointer"
                 aria-label={`Cart, ${totalItems} items`}
               >
                 <ShoppingCart className="w-[22px] h-[22px]" />
@@ -84,7 +84,7 @@ export function Navbar() {
             </div>
 
             <button
-              className="relative w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden ring-2 ring-transparent hover:ring-orange transition-all"
+              className="relative w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden ring-2 ring-transparent hover:ring-orange transition-all cursor-pointer"
               aria-label="User profile"
             >
               <Image

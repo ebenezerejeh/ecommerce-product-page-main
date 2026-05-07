@@ -52,10 +52,10 @@ export function ProductInfo({ product }: ProductInfoProps) {
 
       {/* Quantity + Add to cart */}
       <div className="flex flex-col gap-4 md:flex-row">
-        <div className="flex items-center justify-between bg-light-grey rounded-xl px-6 py-5 md:w-40 flex-shrink-0">
+        <div className="flex items-center justify-between bg-light-grey rounded-xl px-6 py-[18px] md:w-40 flex-shrink-0">
           <button
             onClick={decrement}
-            className="text-orange hover:opacity-60 transition-opacity"
+            className="text-orange hover:opacity-60 transition-opacity cursor-pointer"
             aria-label="Decrease quantity"
           >
             <Minus className="w-3.5 h-3.5" strokeWidth={3} />
@@ -65,7 +65,7 @@ export function ProductInfo({ product }: ProductInfoProps) {
           </span>
           <button
             onClick={increment}
-            className="text-orange hover:opacity-60 transition-opacity"
+            className="text-orange hover:opacity-60 transition-opacity cursor-pointer"
             aria-label="Increase quantity"
           >
             <Plus className="w-3.5 h-3.5" strokeWidth={3} />
@@ -74,7 +74,6 @@ export function ProductInfo({ product }: ProductInfoProps) {
 
         <Button
           onClick={handleAddToCart}
-          disabled={quantity === 0}
           className="flex-1 shadow-[0_20px_50px_-20px_#FF7D1A]"
         >
           <ShoppingCart className="w-5 h-5" />
